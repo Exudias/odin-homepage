@@ -1,0 +1,14 @@
+@font-face {
+  font-family: 'Trajan';
+  src: url('fonts/Trajan_Pro_Bold.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+h1 {
+    font-family: 'Trajan', sans-serif;
+}

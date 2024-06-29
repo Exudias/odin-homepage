@@ -5,10 +5,110 @@
   font-style: normal;
 }
 
+body, h1, h2, h3, h4, h5, h6, p, ul, ol, li {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 16px;
+}
+
 body {
     font-family: 'Roboto', sans-serif;
 }
 
-h1 {
+.font-title {
     font-family: 'Trajan', sans-serif;
+}
+
+header {
+    position: relative;
+
+    margin-left: 128px;
+    margin-right: 128px;
+    margin-top: 32px;
+
+    display: flex;
+}
+
+header::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 150%;
+    height: 500px;
+    background-color: black;
+    z-index: -1;
+
+    transform-origin: bottom left;
+    transform: rotate(-10deg);
+}
+
+.image-with-text {
+    position: relative;
+}
+
+.image-with-text > img {
+    width: 300px;
+
+    -webkit-box-shadow: 1px 3px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 1px 3px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 1px 3px 5px 0px rgba(0,0,0,0.75);
+}
+
+.image-with-text div {
+    position: absolute;
+
+    color: white;
+
+    width: 100%;
+    text-align: center;
+
+    font-size: 2rem;
+
+    bottom: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.header-info {
+    flex: 1;
+
+    background-color: white;
+
+    margin-top: 64px;
+    margin-bottom: 32px;
+
+    padding: 32px;
+
+    display: flex;
+    flex-direction: column;
+
+    -webkit-box-shadow: 1px 3px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 1px 3px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 1px 3px 5px 0px rgba(0,0,0,0.75);
+}
+
+.header-info h1 {
+    font-size: 1.5rem;
+}
+
+.header-info p {
+    flex: 1;
+}
+
+.header-info .socials {
+    height: 32px;
+}
+
+.socials {
+    display: flex;
+    flex-flow: row-reverse;
+    gap: 8px;
+}
+
+.socials img {
+    width: 32px;
 }

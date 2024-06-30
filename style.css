@@ -5,6 +5,10 @@
   font-style: normal;
 }
 
+* {
+    box-sizing: border-box;
+}
+
 body, h1, h2, h3, h4, h5, h6, p, ul, ol, li {
     margin: 0;
     padding: 0;
@@ -28,6 +32,7 @@ header {
     margin-left: 128px;
     margin-right: 128px;
     margin-top: 32px;
+    margin-bottom: 32px;
 
     display: flex;
 }
@@ -35,15 +40,16 @@ header {
 header::before {
     content: '';
     position: absolute;
-    top: -100px;
+    overflow: hidden;
+    top: -175px;
     left: -150px;
-    width: 150%;
+    width: 100%;
     height: 500px;
     background-color: black;
     z-index: -1;
 
     transform-origin: bottom left;
-    transform: rotate(-10deg);
+    transform: rotate(-14deg);
 }
 
 .image-with-text {
@@ -111,4 +117,56 @@ header::before {
 
 .socials img {
     width: 32px;
+}
+
+.socials-small {
+    display: flex;
+    flex-flow: row-reverse;
+    gap: 4px;
+}
+
+.socials-small img {
+    width: 24px;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+
+    padding: 32px;
+
+    margin-left: 128px;
+    margin-right: 128px;
+}
+
+.projects-container {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+
+    width: 100%;
+}
+
+.project-display {
+    -webkit-box-shadow: 1px 3px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 1px 3px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 1px 3px 5px 0px rgba(0,0,0,0.75);
+}
+
+.project-display > img {
+    width: 100%;
+}
+
+.project-header, .project-description {
+    padding: 16px;
+}
+
+.project-header {
+    font-size: 1rem;
+    display: flex;
+    flex-direction: row;
+
+    justify-content: space-between;
+    align-items: center;
 }

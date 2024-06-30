@@ -40,7 +40,7 @@ header::before {
     overflow: hidden;
     top: 0;
     left: 0;
-    width: 100%;
+    width: 100vw;
     height: 400px;
     background-color: black;
     z-index: -1;

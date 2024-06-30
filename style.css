@@ -114,6 +114,12 @@ header::before {
 
 .socials img {
     width: 32px;
+
+    transition: transform 0.3s;
+}
+
+.socials img:hover {
+    transform: scale(1.25);
 }
 
 .socials-small {
@@ -124,6 +130,11 @@ header::before {
 
 .socials-small img {
     width: 24px;
+    transition: transform 0.3s;
+}
+
+.socials-small img:hover {
+    transform: scale(1.25);
 }
 
 main {
